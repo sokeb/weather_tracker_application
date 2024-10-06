@@ -1,21 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import '../../../bloc/weather_bloc_bloc.dart';
 
 class WeatherSituationInfoSection extends StatelessWidget {
   const WeatherSituationInfoSection({
     super.key,
-    required this.temp,
-    required this.weatherStatus,
-    required this.temMax,
-    required this.temMin,
-    required this.feelsLike,
+    required this.state,
   });
 
-  final String temp;
-  final String weatherStatus;
-  final String temMax;
-  final String temMin;
-  final int feelsLike;
+  final WeatherBlocSuccess state;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +20,14 @@ class WeatherSituationInfoSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              temp,
+              '${state.weatherData.main!.temp!}°',
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 55,
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              weatherStatus,
+              state.weatherData.weather![0].main!,
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -45,14 +38,14 @@ class WeatherSituationInfoSection extends StatelessWidget {
         Row(
           children: [
             Lottie.asset(
-              feelsLike < 30
+              state.weatherData.main!.feelsLike!.toInt() < 30
                   ? 'assets/animation/minTamp.json'
                   : 'assets/animation/maxTamp.json',
               height: 30,
               width: 20,
             ),
             Text(
-              '$temMax/$temMin Feels like $feelsLike',
+              '${state.weatherData.main!.tempMax!.round()}°/${state.weatherData.main!.tempMin!.round()}° Feels like ${state.weatherData.main!.feelsLike!.toInt()}°',
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
