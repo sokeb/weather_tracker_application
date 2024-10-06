@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:weather_tracker_application/data/api%20_caller.dart';
 
-import '../data/api_caller.dart';
 import '../data/model/weather_data_model.dart';
 import '../data/service/get_address.dart';
 

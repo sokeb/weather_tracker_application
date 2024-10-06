@@ -4,8 +4,8 @@ import 'package:weather_tracker_application/constants/date_and_day.dart';
 
 class LocationInfoSection extends StatelessWidget {
   const LocationInfoSection({super.key, required this.placeMark});
-
   final Placemark placeMark;
+
 
   @override
   Widget build(BuildContext context) {
@@ -48,16 +48,12 @@ class LocationInfoSection extends StatelessWidget {
               Text(
                 DateAndTime.date,
                 style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300),
+                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w300),
               ),
               Text(
                 DateAndTime.dayName,
                 style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w300),
+                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.w300),
               )
             ],
           )

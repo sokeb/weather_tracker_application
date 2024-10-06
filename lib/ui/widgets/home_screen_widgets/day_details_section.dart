@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_tracker_application/ui/widgets/home_screen_widgets/sun_details_section.dart';
 import '../../../bloc/weather_bloc_bloc.dart';
 import 'InfoCard.dart';
 

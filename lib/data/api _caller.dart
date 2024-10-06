@@ -12,6 +12,7 @@ class ApiCall {
       throw 'An unexpected error occurred';
     }
       weatherData = WeatherDataModel.fromJson(response.responseData);
+      print('done');
       return weatherData;
     }
   }

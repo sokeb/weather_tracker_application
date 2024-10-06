@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class BackgroundStyle extends StatelessWidget {
@@ -37,7 +38,7 @@ class BackgroundStyle extends StatelessWidget {
           ),
         ),
         Align(
-          alignment: const AlignmentDirectional(-1, 0.5),
+          alignment: const AlignmentDirectional(-1,0.5),
           child: Container(
             height: 300,
             width: 300,

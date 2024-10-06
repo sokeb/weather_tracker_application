@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+
 import '../../../bloc/weather_bloc_bloc.dart';
 import '../../../constants/time_format.dart';
 
