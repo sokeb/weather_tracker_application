@@ -21,7 +21,7 @@ class WeatherSituationInfoSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${state.weatherData.main!.temp!}°',
+              '${state.weatherData.main!.temp!.toInt()}°',
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 55,

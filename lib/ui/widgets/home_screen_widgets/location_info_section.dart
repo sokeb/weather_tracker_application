@@ -20,7 +20,7 @@ class LocationInfoSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '📍${placeMark.locality}',
+                '📍${placeMark.subLocality}, ${placeMark.locality} ' ,
                 style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -32,7 +32,7 @@ class LocationInfoSection extends StatelessWidget {
                     width: 25,
                   ),
                   Text(
-                    ' ${placeMark.country}',
+                    '${placeMark.country}',
                     style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
